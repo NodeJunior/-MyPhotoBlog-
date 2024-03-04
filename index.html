@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My photoblog</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <div class="left-zone"></div>
+    <div class="right-zone"></div>
+    <div class="background-overlay"></div>
+    
+    <nav>
+        <ul>
+            <li><a href="https://www.instagram.com/st.ruslan_22_century/?hl=uk" class="fa fa-instagram"></a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>BW photo set</h1>
+    </header>
+
+    <main>
+
+        <section id="photoSet">
+
+            <div class="Set-info">
+                <h2>My new set</h2>
+            </div>
+
+            <div class="mySlides">
+                <img src="image/after_rain_1.jpeg" style="width:100%">
+                <p class="caption">After Rain</p>
+            </div>
+
+            <div class="mySlides">
+                <img src="image/building.jpeg" style="width:100%">
+                <p class="caption">Building</p>
+            </div>
+
+            <div class="mySlides">
+                <img src="image/computer.jpeg" style="width:100%">
+                <p class="caption">Computer</p>
+            </div>
+
+            <div class="mySlides">
+                <img src="image/in_the_grass.jpeg" style="width:100%">
+                <p class="caption">In the Grass</p>
+            </div>
+
+            <div class="mySlides">
+                <img src="image/sun_through_the_leaves_1.jpeg" style="width:100%">
+                <p class="caption">Sun Through the Leaves 1</p>
+            </div>
+
+            <div class="mySlides">
+                <img src="image/sun_through_the_leaves_2.jpeg" style="width:100%">
+                <p class="caption">Sun Through the Leaves 2</p>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">Previous</a>
+            <a class="next" onclick="plusSlides(1)">Next</a>
+
+        </section>
+
+        <section>
+            <article>
+                Welcome to the world of my photography, where every moment becomes a work of art in black and white. 
+                This photo set is a journey through space and time, where each image has its own story.
+                Due to the absence of colors in photographs, we see the world from a new perspective, where details become the main focus. 
+                Each frame impresses with its depth and emotionality, transporting the viewer into an atmosphere of sophistication and mystery.
+                Black and white photos emphasize the contrasts of light and shadow, allowing each photo to become a unique work of art. 
+                They invite you to take a closer look, feel the emotions, and escape into a world where every detailed moment has an important meaning.
+                Let me share this unique journey with you and take you into the exciting world of black and white photography.
+            </article>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 XP Ind.</p>
+    </footer>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].classList.remove('currentPhoto');
+                slides[i].classList.add('hidden');
+            }
+            slides[slideIndex-1].classList.remove('hidden');
+            slides[slideIndex-1].classList.add('currentPhoto');
+        }
+        </script>
+
+</body>
+</html>
